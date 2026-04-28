@@ -1,10 +1,10 @@
 
 import Link from "next/link";
 
-const ButtonLogin = (props)=> {
-    if (props.isLoggedIn)
+const ButtonLogin = ({isLoggedIn, name})=> {
+    if (isLoggedIn)
     return (
-    <Link href= "/dashboard"> Welcome Back, {props.name} </Link>
+    <Link href= "/dashboard"> Welcome Back, {name} </Link>
     )
     else {
         return <button>Log in</button>
