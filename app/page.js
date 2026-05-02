@@ -1,4 +1,6 @@
 import ButtonLogin from "@/components/ButtonLogin";
+import Image from "next/image";
+import { supabase } from "@/libs/supabase";
 
 export default function Home() {
   const isLoggedIn = true;
@@ -19,7 +21,8 @@ export default function Home() {
         </div>
       </section>
       {/*HERO*/}
-      <section className="px-8 text-center py-32 max-w-3xl mx-auto">
+      <section className="px-8 text-center py-32 max-w-3xl mx-auto flex-col lg:flex-row gap-14">
+        <Image src="/Bild.jpg" alt="Bild" width={500} height={300} />
         <h1 className="text-4xl font-extrabold mb-6 lg:text-5xl">
           Kundenfeedback sammeln, bessere Produkte bauen
         </h1>
@@ -38,19 +41,20 @@ export default function Home() {
           <h2 className="text-3xl font-extrabold mb-12 lg:text-4xl text-center">
             Preise, die sich deinen Bedürfnissen anpassen
           </h2>
-          <div className="p-8 bg-base-100 w-96 rounded-3xl mx-auto">
+          <div className="p-8 bg-base-100 w-96 rounded-3xl mx-auto mb-6">
             <div className="flex gap-2 items-baseline">
               <div className="text-4xl font-black">19€</div>
               <div className="uppercase text-sm font-medium opacity-60">
                 /monat
               </div>
             </div>
-            <ul>
+            <ul className="py-8">
               <li>Kundenfeedback sammeln</li>
               <li>Unbegrenzte Boards</li>
               <li>Admin-Dashboard</li>
               <li>24/7 Support</li>
             </ul>
+            <ButtonLogin isLoggedIn={isLoggedIn} name={name} />
           </div>
         </div>
       </section>
