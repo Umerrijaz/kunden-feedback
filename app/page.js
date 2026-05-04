@@ -1,6 +1,5 @@
 import ButtonLogin from "@/components/ButtonLogin";
 import Image from "next/image";
-import { supabase } from "@/libs/supabase";
 
 export default function Home() {
   const isLoggedIn = true;
